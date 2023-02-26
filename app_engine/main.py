@@ -24,11 +24,12 @@ def index():
 #model = tf.keras.models.load_model('model-best.h5')
 #model = joblib.load("model-best.h5")
 #wandb artifacts
-run = wandb.init()
-artifact = run.use_artifact('aimfg-california/Nigel-Baseplates-2022/model-rosy-meadow-247:v0', type='model')
-artifact_dir = artifact.download()
-logged_model_wandb =artifact_dir#'./artifacts/rosy-meadow-247/model-best.h5'
-MODEL=load_model(logged_model_wandb)
+#run = wandb.init()
+#artifact = run.use_artifact('aimfg-california/Nigel-Baseplates-2022/model-rosy-meadow-247:v0', type='model')
+#artifact_dir = artifact.download()
+#logged_model_wandb =artifact_dir#'./artifacts/rosy-meadow-247/model-best.h5'
+
+MODEL=tf.keras.models.load_model('model-best.h5')
 # Define the class names
 class_names = ['class1', 'class2', 'class3', 'class4', 'class5', 'class6']
 
