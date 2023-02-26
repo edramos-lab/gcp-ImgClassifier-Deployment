@@ -15,7 +15,6 @@ pillow
 pyopenssl
 scipy
 scikit-learn
-#tensorflow==2.10.0
 mlflow-extend
 opencv-python
 fastapi
